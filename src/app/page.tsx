@@ -1,9 +1,10 @@
-import ButtonLoginStart from "@/components/ButtonLoginStart";
-import CardFeactures from "@/components/CardFeactures";
+"use client";
+
 import CardResources from "@/components/CardResources";
+import CardFeactures from "@/components/CardFeactures";
 import { motion } from "framer-motion";
 import CardResults from "@/components/CardResults";
-
+import ButtonLoginStart from "@/components/ButtonLoginStart";
 export default function Home() {
   const features = [
     {
@@ -79,32 +80,54 @@ export default function Home() {
       <main className="w-full">
         {/* Seção Principal */}
         <section className="text-center flex flex-col items-center justify-center gap-4 w-full bg-[#F2EFFE] px-2 py-15">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#171717]">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-6xl font-bold text-neutral-900 mb-6"
+          >
             Transforme sua vida com a{" "}
-            <span className="text-blue-500">MindFlow</span>
-          </h1>
-          <p className="break-words text-[16px] md:text-[22px] p-0 md:py-3 text-[#525252] max-w-[90%] md:max-w-[580px]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
+              MindFlow
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto"
+          >
             A plataforma completa para gerenciar seus hábitos, metas, tempo e
             finanças em um só lugar.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-  <ButtonLoginStart
-    href="/cadastro"
-    text="Começar Agora"
-    className="bg-[#2B7FFF] text-white hover:bg-[#2b92ffe9] transition-all duration-200 w-[80%] sm:w-full px-10 py-3"
-  />
-  <ButtonLoginStart
-    href="/login"
-    text="Fazer Login"
-    className="bg-white text-[#2B7FFF] hover:bg-[#dedede83] transition-all duration-200 w-[80%] sm:w-full px-10 py-3"
-  />
-</div>
-
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <ButtonLoginStart
+              href="/cadastro"
+              text="Começar Agora"
+              className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200 px-8 py-4 w-[340px] md:w-auto"
+            />
+            <ButtonLoginStart
+              href="/login"
+              text="Fazer Login"
+              className="bg-white text-blue-600 hover:bg-[#dededefb] transition-all duration-200 px-8 py-4 w-[340px] md:w-auto"
+            />
+          </motion.div>
         </section>
 
         {/* Recursos Poderosos */}
-        <section className="flex flex-col items-center justify-center gap-4 pt-10 px-4">
+
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="flex flex-col items-center justify-center gap-4 pt-10 px-4"
+        >
           <h1 className="text-[25px] md:text-3xl font-bold text-[#171717]">
             Recursos Poderosos
           </h1>
@@ -121,10 +144,16 @@ export default function Home() {
               />
             ))}
           </div>
-        </section>
+        </motion.section>
 
         {/* Resultados Comprovados */}
-        <section className="flex flex-col items-center justify-center gap-4 pt-40 px-4">
+
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="flex flex-col items-center justify-center gap-4 pt-40 px-4"
+        >
           <h1 className="text-[25px] md:text-3xl font-bold text-[#171717] text-center">
             Resultados Comprovados
           </h1>
@@ -153,10 +182,16 @@ export default function Home() {
               description="Economia média de tempo por dia."
             />
           </div>
-        </section>
+        </motion.section>
 
         {/* Recursos Premium */}
-        <section className="flex flex-col items-center text-center justify-center gap-4 pt-40 px-4">
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="flex flex-col items-center text-center justify-center gap-4 pt-40 px-4"
+        >
           <h1 className="text-[25px] md:text-3xl font-bold text-[#171717]">
             Recursos Premium
           </h1>
@@ -178,13 +213,19 @@ export default function Home() {
             <ButtonLoginStart
               href="/pricing"
               text="Ver Planos Premium"
-              className="bg-[#2B7FFF] text-white hover:bg-[#2b92ffe9] transition-all duration-200 text-lg px-10 py-3  "
+              className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200 text-lg px-8 py-4  "
             />
           </div>
-        </section>
+        </motion.div>
 
         {/* Chamada para ação final */}
-        <section className="flex flex-col items-center justify-center gap-4 py-15 bg-[#2B7FFF] px-4 text-center">
+
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="flex flex-col items-center justify-center gap-4 py-15 bg-blue-600 px-4 text-center"
+        >
           <h1 className="text-white text-[25px] md:text-3xl font-bold">
             Comece Sua Jornada Hoje
           </h1>
@@ -195,9 +236,9 @@ export default function Home() {
           <ButtonLoginStart
             text="Criar Conta Gratuita"
             href="/cadastro"
-            className="bg-white text-[#2B7FFF] hover:bg-[#dededefb] transition-all duration-200 mt-2 px-10 py-3 font-medium "
+            className="bg-white text-blue-600 hover:bg-[#dededefb] transition-all duration-200 mt-2 px-8 py-4 font-medium "
           />
-        </section>
+        </motion.section>
       </main>
     </div>
   );
