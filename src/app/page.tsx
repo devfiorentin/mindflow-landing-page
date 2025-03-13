@@ -87,18 +87,20 @@ export default function Home() {
             A plataforma completa para gerenciar seus hábitos, metas, tempo e
             finanças em um só lugar.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 w-full justify-center">
-            <ButtonLoginStart
-              href="/cadastro"
-              text="Começar Agora"
-              className="bg-[#2B7FFF] text-white hover:bg-[#2b92ffe9] transition-all duration-200 w-full md:w-auto px-10 py-3 "
-            />
-            <ButtonLoginStart
-              href="/login"
-              text="Fazer Login"
-              className="bg-white text-[#2B7FFF] hover:bg-[#dedede83] transition-all duration-200 w-full md:w-auto px-10 py-3 "
-            />
-          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+  <ButtonLoginStart
+    href="/cadastro"
+    text="Começar Agora"
+    className="bg-[#2B7FFF] text-white hover:bg-[#2b92ffe9] transition-all duration-200 w-[80%] sm:w-full px-10 py-3"
+  />
+  <ButtonLoginStart
+    href="/login"
+    text="Fazer Login"
+    className="bg-white text-[#2B7FFF] hover:bg-[#dedede83] transition-all duration-200 w-[80%] sm:w-full px-10 py-3"
+  />
+</div>
+
         </section>
 
         {/* Recursos Poderosos */}
@@ -193,7 +195,7 @@ export default function Home() {
           <ButtonLoginStart
             text="Criar Conta Gratuita"
             href="/cadastro"
-            className="bg-white text-[#2B7FFF] hover:bg-[#dededefb] transition-all duration-200 mt-2 px-10 py-3 "
+            className="bg-white text-[#2B7FFF] hover:bg-[#dededefb] transition-all duration-200 mt-2 px-10 py-3 font-medium "
           />
         </section>
       </main>

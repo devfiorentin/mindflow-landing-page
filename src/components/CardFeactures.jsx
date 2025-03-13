@@ -1,6 +1,6 @@
 export default function CardFeactures({ icon, title, description }) {
     return (
-      <div className="bg-white p-8 rounded-2xl hover:shadow-md transition-shadow  max-w-[350px] md:w-[350px] ">
+      <div className="bg-white p-8 rounded-2xl hover:shadow-md transition-shadow max-w-[500px] break-words wrap direction-column  ">
         <div className="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-2xl mb-6">
           {icon}
         </div>
