@@ -104,7 +104,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+            transition={{ delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <ButtonLoginStart
@@ -125,7 +125,7 @@ export default function Home() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.4 }}
           className="flex flex-col items-center justify-center gap-4 pt-10 px-4"
         >
           <h1 className="text-[25px] md:text-3xl font-bold text-[#171717]">
@@ -152,7 +152,7 @@ export default function Home() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.4 }}
           className="flex flex-col items-center justify-center gap-4 pt-40 px-4"
         >
           <h1 className="text-[25px] md:text-3xl font-bold text-[#171717] text-center">
@@ -190,7 +190,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.4 }}
           className="flex flex-col items-center text-center justify-center gap-4 pt-40 px-4"
         >
           <h1 className="text-[25px] md:text-3xl font-bold text-[#171717]">
@@ -224,7 +224,7 @@ export default function Home() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.4 }}
           className="flex flex-col items-center justify-center gap-4 py-15 bg-blue-600 px-4 text-center"
         >
           <h1 className="text-white text-[25px] md:text-3xl font-bold">
