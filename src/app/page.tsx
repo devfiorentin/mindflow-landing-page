@@ -134,6 +134,7 @@ export default function Home() {
           <p className="text-[15px] md:text-lg text-[#525252] text-center">
             Tudo que você precisa para alcançar seus objetivos
           </p>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 w-[320px] md:w-[90%] mx-auto">
             {features.map((feature) => (
               <CardFeactures
